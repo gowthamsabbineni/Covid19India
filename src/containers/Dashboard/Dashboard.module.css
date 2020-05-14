@@ -1,0 +1,12 @@
+
+h3.last_updated{
+    font-size: 0.675em;
+    text-align: center;
+    color: #f76767;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.ChartsDiv{
+    display: flex;
+}
