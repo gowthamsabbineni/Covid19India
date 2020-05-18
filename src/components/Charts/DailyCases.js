@@ -6,8 +6,8 @@ import React from 'react';
   	return (
       <div style={{"display": "inline-block"}}>
         <h4 className="text-danger">Daily Cases</h4>
-        <BarChart width={500} height={400} data={recentData}>
-        <CartesianGrid strokeDasharray="3 3" />
+        <BarChart width={500} height={350} data={recentData}>
+        <CartesianGrid vertical={false} horizontal={false}/>
         <XAxis dataKey="date">
         <Label value="Date" offset={0} position="insideBottom" />
         </XAxis>

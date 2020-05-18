@@ -7,9 +7,9 @@ const SpreadTrends = function(props){
     	<div style={{"display": "inline-block"}} id="SpreadTrends">
       	<h4 className="text-danger">Spread Trends</h4>
         <p className="text-info">Total Confirmed</p>
-        <LineChart width={500} height={220} data={recentData} syncId="anyId"
+        <LineChart width={400} height={220} data={recentData} syncId="anyId"
               margin={{top: 10, right: 30, left: 0, bottom: 0}}>
-          <CartesianGrid strokeDasharray="3 3"/>
+          <CartesianGrid vertical={false} horizontal={false}/>
           <XAxis dataKey="date"/>
           <YAxis>
           <Label value="Total" position="insideLeft" angle={90} />
@@ -18,9 +18,9 @@ const SpreadTrends = function(props){
           <Line type='monotone' dataKey='totalconfirmed' stroke='#ff073a' fill='#8884d8' />
         </LineChart>
         <p className="text-info">Total Recovered</p>
-        <LineChart width={500} height={220} data={recentData} syncId="anyId"
+        <LineChart width={400} height={220} data={recentData} syncId="anyId"
               margin={{top: 10, right: 30, left: 0, bottom: 0}}>
-          <CartesianGrid strokeDasharray="3 3"/>
+          <CartesianGrid vertical={false} horizontal={false}/>
           <XAxis dataKey="date"/>
           <YAxis type="number" domain={[0, 50000]}>
           <Label value="Total" position="insideLeft" angle={90} />
@@ -29,9 +29,9 @@ const SpreadTrends = function(props){
           <Line type='monotone' dataKey='totalrecovered' stroke='#73C686' fill='#82ca9d' />
         </LineChart>
         <p className="text-info">Total Deceased</p>
-        <LineChart width={500} height={220} data={recentData} syncId="anyId"
+        <LineChart width={400} height={220} data={recentData} syncId="anyId"
               margin={{top: 10, right: 30, left: 0, bottom: 0}}>
-          <CartesianGrid strokeDasharray="3 3"/>
+          <CartesianGrid vertical={false} horizontal={false}/>
           <XAxis dataKey="date"/>
           <YAxis type="number" domain={[0, 15000]}>
           <Label value="Total" position="insideLeft" angle={90} />

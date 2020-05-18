@@ -83,7 +83,7 @@ function CasesTable(props) {
                 {window.innerWidth <= 769
                   ? window.innerWidth <= 330
                     ? "A"
-                    : "Actv"
+                    : "Active"
                   : "Active"}
               </span>
             </th>

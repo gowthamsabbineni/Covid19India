@@ -6,14 +6,14 @@ const TotalConfirmedChart = function(props){
   	return (
       <div style={{"display": "inline-block"}}>
         <h4 className="text-danger">Total Cases</h4>
-        <LineChart width={500} height={400} data={recentData}>
+        <LineChart width={500} height={350} data={recentData}>
         <XAxis dataKey="date">
           <Label value="Date" offset={0} position="insideBottom" />
         </XAxis>
         <YAxis type="number" domain={[0, 100000]}>
         <Label value="Total" position="insideLeft" angle={90} />
         </YAxis>
-        <CartesianGrid strokeDasharray="4 4"/>
+        <CartesianGrid vertical={false} horizontal={false}/>
         <Tooltip/>
         <Legend value="Chart"/>
         <Line type="monotone" dataKey="totalconfirmed" stroke="#ff073a" dot={false}/>
