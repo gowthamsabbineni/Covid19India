@@ -18,7 +18,6 @@ const HomePage = (props) => {
   const getData = function () {
     axios.get("https://api.covid19india.org/data.json")
       .then(resp => {
-        console.log(resp.data);
         setdataItem(resp.data);
         setlastupdated(
           moment(resp.data.statewise[0].lastupdatedtime, "DD/MM/YYYY h:mm").format("MMMM Do YYYY h:mm a")
