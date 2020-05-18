@@ -1,12 +1,13 @@
-import {BarChart, XAxis, YAxis,Label,Bar, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {BarChart, XAxis, YAxis,Label,Bar, CartesianGrid,ResponsiveContainer, Tooltip, Legend} from 'recharts';
 import React from 'react';
  const DailyCases = function(props){
     const data = props.timeseries;
     const recentData = data.slice(data.length-30,data.length);
   	return (
-      <div style={{"display": "inline-block"}}>
-        <h4 className="text-danger">Daily Cases</h4>
-        <BarChart width={500} height={350} data={recentData}>
+      <>
+        <h4 className="text-secondary">Daily Cases</h4>
+        <ResponsiveContainer width={"95%"} height={350}>
+        <BarChart data={recentData}>
         <CartesianGrid vertical={false} horizontal={false}/>
         <XAxis dataKey="date">
         <Label value="Date" offset={0} position="insideBottom" />
@@ -19,7 +20,8 @@ import React from 'react';
         <Bar dataKey="dailyconfirmed" fill="#ff073a" />
         <Bar dataKey="dailyrecovered" fill="#82ca9d" />
         </BarChart>
-      </div>
+        </ResponsiveContainer>
+      </>
     );
 };
 export default DailyCases;

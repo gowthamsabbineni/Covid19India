@@ -1,12 +1,13 @@
-import {LineChart, Line, XAxis, YAxis,Label, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {LineChart, Line, XAxis, YAxis,Label,ResponsiveContainer, CartesianGrid, Tooltip, Legend} from 'recharts';
 import React from 'react';
 const TotalConfirmedChart = function(props){
       const data = props.timeseries;
       const recentData = data.slice(data.length-30,data.length); 
   	return (
-      <div style={{"display": "inline-block"}}>
-        <h4 className="text-danger">Total Cases</h4>
-        <LineChart width={500} height={350} data={recentData}>
+      <>
+        <h4 className="text-secondary">Total Cases</h4>
+        <ResponsiveContainer width={"95%"} height={350}>
+        <LineChart data={recentData}>
         <XAxis dataKey="date">
           <Label value="Date" offset={0} position="insideBottom" />
         </XAxis>
@@ -20,7 +21,8 @@ const TotalConfirmedChart = function(props){
         <Line type="monotone" dataKey="totalrecovered" stroke="#73C686" dot={false}/>
         <Line type="monotone" dataKey="totaldeceased" stroke="#6c757d" dot={false}/>
         </LineChart>
-      </div>
+        </ResponsiveContainer>
+      </>
     );
 };
 export default TotalConfirmedChart;

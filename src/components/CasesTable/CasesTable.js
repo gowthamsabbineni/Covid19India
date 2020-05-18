@@ -52,7 +52,7 @@ function CasesTable(props) {
 
   return (
     <Scrollbars className={classes.scrollbar_height} >
-    <div className={classes.casesTableDiv}>
+    <div className={"container"}>
       <table className={` table ${classes.fixed_header}`}>
         <thead className={classes.theaddata}>
           <tr className={classes.sticky}>
