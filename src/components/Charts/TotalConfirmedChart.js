@@ -11,7 +11,7 @@ const TotalConfirmedChart = function(props){
         <XAxis dataKey="date">
           <Label value="Date" offset={0} position="insideBottom" />
         </XAxis>
-        <YAxis type="number" domain={[0, 100000]}>
+        <YAxis type="number" domain={[0, 200000]}>
         <Label value="Total" position="insideLeft" angle={90} />
         </YAxis>
         <CartesianGrid vertical={false} horizontal={false}/>
