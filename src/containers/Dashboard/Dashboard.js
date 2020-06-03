@@ -38,7 +38,7 @@ const HomePage = (props) => {
                  )
   }
   return (
-      <div style={{"marginTop":"50px"}}>
+      <div style={{"marginTop":"65px"}}>
         {lDashboard}
       </div>
   );
