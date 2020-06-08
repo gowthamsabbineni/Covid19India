@@ -12,7 +12,7 @@ import React from 'react';
         <XAxis dataKey="date">
         <Label value="Date" offset={0} position="insideBottom" />
         </XAxis>
-        <YAxis type="number" domain={[0, 6000]}>
+        <YAxis type="number" domain={[0, 15000]}>
         <Label value="Total" position="insideLeft" angle={90} />
         </YAxis>
         <Tooltip />
